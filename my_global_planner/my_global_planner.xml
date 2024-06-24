@@ -1,0 +1,7 @@
+<library path="lib/libmy_global_planner_lib">
+    <class name="my_global_planner/MyGlobalPlanner" type="my_global_planner::MyGlobalPlanner" base_class_type="nav_core::BaseGlobalPlanner">
+    <description>
+        This plugin provides a custom global planner for navigation.
+    </description>
+    </class>
+</library>

@@ -1,0 +1,2 @@
+my_global_planner_plugin:
+  tolerance: 0.2

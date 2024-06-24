@@ -1,0 +1,5 @@
+<launch>
+    <node name="publisher" pkg="two_wheel_car" type="send_points.py">
+        <param name="filename" value="$(find two_wheel_car)/param/points.yaml" />
+    </node>
+</launch>

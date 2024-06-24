@@ -1,0 +1,16 @@
+<launch>
+    <!--路径规划-->
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+        <!--加载自己的路径规划算法-->
+        <param name="base_global_planner" value="my_global_planner/MyGlobalPlanner"/>
+        <!--加载DWA算法-->
+        <!-- <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> -->
+
+        <rosparam file="$(find two_wheel_car)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find two_wheel_car)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find two_wheel_car)/param/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find two_wheel_car)/param/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find two_wheel_car)/param/base_local_planner_params.yaml" command="load" />
+
+    </node>
+</launch>
